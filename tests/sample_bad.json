@@ -1,0 +1,39 @@
+{
+  "decision": {
+    "specific_issue": "",
+    "ai_not_running": true,
+    "motivation": "curiosity"
+  },
+  "scene_card": {
+    "process": "整个销售流程智能化",
+    "current_cost": "挺费时间的",
+    "data_access": "",
+    "tried_and_blocked": "没试过",
+    "quantifiable_success": "效率提升",
+    "pusher": "it"
+  },
+  "scope": {
+    "stages": ["报价单生成", "客户回访"],
+    "high_freq": true,
+    "low_risk": false,
+    "result_judgeable": false
+  },
+  "fallback": {
+    "reviewer": "大家看一下",
+    "release_condition": "",
+    "rollback_point": "",
+    "in_process_doc": false,
+    "automation_before_samples": true
+  },
+  "prototype": {
+    "prompt_template": false,
+    "test_records": 3,
+    "comparison_metrics": true,
+    "accepted_by": "tech"
+  },
+  "replication": {
+    "second_stage": "合同审核",
+    "first_stage_metrics": {},
+    "copy_full_flow": false
+  }
+}

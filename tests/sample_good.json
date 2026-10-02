@@ -1,0 +1,39 @@
+{
+  "decision": {
+    "specific_issue": "报价单生成：销售每天手工拼报价，AI 还没跑通",
+    "ai_not_running": true,
+    "motivation": "real_problem"
+  },
+  "scene_card": {
+    "process": "报价单生成（客户询价→报价单）",
+    "current_cost": "每张 15 分钟，每天 8 张，1 个销售全职在做",
+    "data_access": "历史报价在 ERP（销售可导出 CSV），价格表每周更新",
+    "tried_and_blocked": "试过让销售自己用 LLM 网页版，卡在价格表格式对不上、错价没兜底",
+    "quantifiable_success": "准确率≥8/10，单张耗时 15min→2min，销售采纳率≥80%",
+    "pusher": "business_owner"
+  },
+  "scope": {
+    "stages": ["报价单生成"],
+    "high_freq": true,
+    "low_risk": true,
+    "result_judgeable": true
+  },
+  "fallback": {
+    "reviewer": "销售本人出单前逐行核对价格",
+    "release_condition": "连续 20 张零错价后，标准品目自动放行",
+    "rollback_point": "任何错价回退到全人工核对，错价单作废重出",
+    "in_process_doc": true,
+    "automation_before_samples": false
+  },
+  "prototype": {
+    "prompt_template": true,
+    "test_records": 10,
+    "comparison_metrics": true,
+    "accepted_by": "user"
+  },
+  "replication": {
+    "second_stage": "",
+    "first_stage_metrics": {},
+    "copy_full_flow": true
+  }
+}
